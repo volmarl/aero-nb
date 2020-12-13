@@ -23,9 +23,9 @@ export NSUP_PERIOD=${NSUP_PERIOD:-120}
 
 
 # Fill out conffile with above values
-#if [ -f /etc/aerospike/aerospike.template.conf ]; then
-#        envsubst < /etc/aerospike/aerospike.template.conf > /etc/aerospike/aerospike.conf
-#fi
+if [ -f /etc/aerospike/aerospike.template.conf ]; then
+        envsubst < /etc/aerospike/aerospike.template.conf > /etc/aerospike/aerospike.conf
+fi
 
 # if command starts with an option, prepend asd
 if [ "${1:0:1}" = '-' ]; then

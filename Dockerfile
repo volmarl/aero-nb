@@ -53,7 +53,8 @@ RUN \
 
 
 # Add the Aerospike configuration specific to this dockerfile
-COPY aerospike.conf /etc/aerospike/aerospike.conf
+#COPY aerospike.conf /etc/aerospike/aerospike.conf
+COPY aerospike.template.conf /etc/aerospike/aerospike.template.conf
 COPY entrypoint.sh /entrypoint.sh
 COPY aerospike /etc/init.d/
 COPY notebooks* /home/${NB_USER}/notebooks
