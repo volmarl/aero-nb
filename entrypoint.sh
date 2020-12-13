@@ -56,7 +56,7 @@ if [ "$1" = 'asd' ]; then
 	set -- "$@" --foreground
 
 fi
-
+service aerospike start
 # the command isn't asd so run the command the user specified
 
 exec "$@"
